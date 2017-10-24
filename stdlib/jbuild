@@ -1,0 +1,22 @@
+(jbuild_version 1)
+
+(library
+ ((name        stdlib)
+  (public_name stdlib)
+  (modules     (stdlib
+                util
+                algebra
+                my_dict
+                my_set
+                datastructures
+                my_disjoint_set
+                my_heap
+                my_priority_queue
+                my_memoizer
+                my_tree
+                my_list_extensions
+                string_utilities
+                ))
+  (preprocess (pps (ppx_deriving.std ppx_hash)))
+  (synopsis "Standard Library Anders Likes")
+  (libraries (Core Str))))

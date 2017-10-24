@@ -1,0 +1,74 @@
+# jbuilder runtest
+# OCAMLPARAM: unset
+# Workspace root: /Users/amiltner/dev/OCamlStdLib/stdlib_tests
+$ /Users/amiltner/.opam/4.04.1/bin/ocamlfind printconf path > /var/folders/8j/3t042l2n1kd4ghwkvgdcl1gh0000gn/T/jbuild49e4d5.output
+$ /Users/amiltner/.opam/4.04.1/bin/ocamlc.opt -config > /var/folders/8j/3t042l2n1kd4ghwkvgdcl1gh0000gn/T/jbuild500e4b.output
+# Jbuilder context:
+#  ((name default)
+#   (kind default)
+#   (merlin true)
+#   (for_host ())
+#   (build_dir _build/default)
+#   (toplevel_path (/Users/amiltner/.opam/4.04.1/lib/toplevel))
+#   (ocaml_bin /Users/amiltner/.opam/4.04.1/bin)
+#   (ocaml /Users/amiltner/.opam/4.04.1/bin/ocaml)
+#   (ocamlc /Users/amiltner/.opam/4.04.1/bin/ocamlc.opt)
+#   (ocamlopt (/Users/amiltner/.opam/4.04.1/bin/ocamlopt.opt))
+#   (ocamldep /Users/amiltner/.opam/4.04.1/bin/ocamldep.opt)
+#   (ocamlmklib /Users/amiltner/.opam/4.04.1/bin/ocamlmklib.opt)
+#   (env ())
+#   (findlib_path (/Users/amiltner/.opam/4.04.1/lib))
+#   (arch_sixtyfour true)
+#   (natdynlink_supported true)
+#   (opam_vars ())
+#   (ocamlc_config
+#    ((architecture amd64)
+#     (asm "clang -arch x86_64 -c")
+#     (asm_cfi_supported true)
+#     (ast_impl_magic_number Caml1999M020)
+#     (ast_intf_magic_number Caml1999N018)
+#     (bytecomp_c_compiler
+#      "gcc -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT ")
+#     (bytecomp_c_libraries "-lcurses -lpthread                  ")
+#     (cc_profile -pg)
+#     (ccomp_type cc)
+#     (cma_magic_number Caml1999A012)
+#     (cmi_magic_number Caml1999I021)
+#     (cmo_magic_number Caml1999O011)
+#     (cmt_magic_number Caml2012T008)
+#     (cmx_magic_number Caml1999Y015)
+#     (cmxa_magic_number Caml1999Z014)
+#     (cmxs_magic_number Caml2007D002)
+#     (default_executable_name a.out)
+#     (exec_magic_number Caml1999X011)
+#     (ext_asm .s)
+#     (ext_dll .so)
+#     (ext_lib .a)
+#     (ext_obj .o)
+#     (flambda false)
+#     (host x86_64-apple-darwin16.6.0)
+#     (model default)
+#     (native_c_compiler
+#      "gcc -O2 -fno-strict-aliasing -fwrapv -Wall -D_FILE_OFFSET_BITS=64 -D_REENTRANT")
+#     (native_c_libraries "")
+#     (native_pack_linker "ld -r -arch x86_64  -o ")
+#     (os_type Unix)
+#     (ranlib ranlib)
+#     (safe_string false)
+#     (spacetime false)
+#     (standard_library /Users/amiltner/.opam/4.04.1/lib/ocaml)
+#     (standard_library_default /Users/amiltner/.opam/4.04.1/lib/ocaml)
+#     (standard_runtime /Users/amiltner/.opam/4.04.1/bin/ocamlrun)
+#     (system macosx)
+#     (systhread_supported true)
+#     (target x86_64-apple-darwin16.6.0)
+#     (version 4.04.1)
+#     (with_frame_pointers false)))
+#   (which
+#    ((ocamlc (/Users/amiltner/.opam/4.04.1/bin/ocamlc.opt))
+#     (ocamlfind (/Users/amiltner/.opam/4.04.1/bin/ocamlfind)))))
+$ (cd _build/default && /Users/amiltner/.opam/4.04.1/bin/ocamldep.opt -modules ounit_extensions.ml unittests.ml) > _build/default/unittests.depends.ocamldep-output
+$ (cd _build/default && /Users/amiltner/.opam/4.04.1/bin/ocamlc.opt -w -40 -g -bin-annot -I /Users/amiltner/.opam/4.04.1/lib/oUnit -I /Users/amiltner/.opam/4.04.1/lib/ocaml -I /Users/amiltner/.opam/4.04.1/lib/ounit -no-alias-deps -I . -o ounit_extensions.cmo -c -impl ounit_extensions.ml)
+> File "ounit_extensions.ml", line 1, characters 5-11:
+> Error: Unbound module Stdlib
+[2]
